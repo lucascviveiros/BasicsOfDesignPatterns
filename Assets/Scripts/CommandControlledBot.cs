@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
+///Command Pattern
 public class CommandControlledBot : MonoBehaviour
 {
     private NavMeshAgent _agent; 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+///Flyweight Pattern
 public class ChangeColor : MonoBehaviour
 {
     private Renderer _renderer;
