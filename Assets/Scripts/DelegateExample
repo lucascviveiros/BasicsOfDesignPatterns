@@ -1,0 +1,40 @@
+using UnityEngine;
+
+public class DelegateExample : MonoBehaviour
+{
+    public delegate void MathDelegate(int a, int b);
+
+    public void DoMath(int a, int b, MathDelegate mathDelegate)
+    {
+        int result = mathDelegate(a, b);
+        Debug.Log("Result: " + result);
+    }
+
+    void Start()
+    {
+        DoMath(5, 10, Add);
+        DoMath(5, 10, Subtract);
+        DoMath(5, 10, Multiply);
+        DoMath(5, 10, Divide);
+    }
+
+    int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    int Subtract(int a, int b)
+    {
+        return a - b;
+    }
+
+    int Multiply(int a, int b)
+    {
+        return a * b;
+    }
+
+    int Divide(int a, int b)
+    {
+        return a / b;
+    }
+}
